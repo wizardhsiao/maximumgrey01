@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/maximumgrey.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Poiret+One|Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo"></div>
+    <div class="header">
+        <ul>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">STORE</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+        </ul>
+    </div>
+    <div id="banner">
+        <div class="photo">
+                <img src="img/1207.jpg">
+                <img src="img/團照.png">
+                <img src="img/比賽.jpg">
+                <img src="img/表演.jpg">
+                <img src="img/DSC_0265 (1).jpg">
+        </div>
+    </div>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/jquery.cycle.all.js"></script>
+      <script>
+          $(document).ready(function () {
+            $('.photo').cycle({
+                fx: 'fade'
+            });
+        });
+      </script>
+
+
+</body>
+</html>

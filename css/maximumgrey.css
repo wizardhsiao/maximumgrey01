@@ -1,0 +1,69 @@
+*{box-sizing: border-box;
+margin: 0;
+padding: 0;
+list-style: none;}
+
+body{
+    background-color: black;
+}
+.header{
+    margin: 20px auto;
+    width: 100%;
+    height: 150px;
+}
+.logo{
+    width: 100%;
+    height:100vh;
+    background-image: url(../img/IIDT\ LOGO\ FINAL-01.jpg);
+    background-size: contain;
+    background-position: 50% -50%;
+    background-repeat: no-repeat;
+    float: left;
+}
+ul{
+    /* position: fixed; */
+}
+ul li{
+    /* float: left; */
+    margin: 0px 0px 80px 50px;
+    color: aliceblue;
+    font-family:'Poiret One', cursive;
+}
+li:first-child{
+    padding-top: 850px;
+}
+li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+li a:hover{
+    color: rgb(167, 27, 27);
+    transition: all 0.5s;
+}
+#banner{
+    margin: 0 auto;
+    width: 1140px;
+}
+/* .photo{
+    margin: 10vh auto;
+    width: 1140px;
+    height: 600px;
+    background-color: #fff;
+    background-image: url(../img/1207.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    float: left;
+} */
+.photo {  
+    height:  120vh;
+    width:   1140px;
+    padding: 0;  
+    margin:  0;
+	overflow:hidden;
+}
+.photo img {  
+    width:  1140px;
+    height: 110vh;
+}

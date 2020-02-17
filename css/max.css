@@ -1,0 +1,706 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    /* height: 100vh; */
+    max-width: 1140px;
+}
+
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    /* display: none; */
+}
+
+.overlay .logo {
+    position: absolute;
+    top: -5%;
+    height: 100%;
+    width: calc(100% - 18px);
+    opacity: 0;
+}
+
+.logo {
+    background-image: url(../img/logo.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.empty {
+    position: relative;
+    /* height: 1px; */
+}
+
+.list {
+    display: none;
+    position: absolute;
+    /* display: flex; */
+    top: 0;
+    left: 0;
+    z-index: 999;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.list a {
+    line-height: 100px;
+    margin: 50px;
+    font-family: 'Poiret One', cursive;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.list a:hover {
+    color: rgb(209, 35, 35);
+    transition: all 0.5s;
+}
+
+.color {
+    line-height: 100px;
+    margin: 50px;
+    font-family: 'Poiret One', cursive;
+    color: rgb(209, 35, 35);
+    text-decoration: none;
+}
+
+/* .nav-color{
+    color: rgb(255,255,255);
+
+} */
+.nav-color.active {
+    color: rgb(209, 35, 35);
+
+}
+
+.nav-color:hover {
+    color: rgb(209, 35, 35);
+
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: block;
+}
+
+.About_us {
+    margin: auto;
+    max-width: 1600px;
+    /* margin: 850px 0px 0 225px; */
+}
+
+.About_us>ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.About_us li {
+    margin: 30px auto;
+    margin-left: 10px;
+}
+
+.font {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.About_us>ul>li>p {
+    font-size: 30px;
+    font-family: 'Poiret One', cursive;
+}
+
+.About_us li:last-child {
+    margin: 30px auto;
+}
+
+p {
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    /* font-family: 'Poiret One', cursive; */
+    color: aliceblue;
+}
+
+.store {
+    max-width: 100%;
+    width: 100%;
+}
+
+.towel {
+    background-image: url(../img/毛巾.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin: 0 auto;
+    padding-bottom: 50%;
+}
+
+.towel>p {
+    line-height: 100px;
+    font-size: 30px;
+}
+
+.communty ul {
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 400px; */
+    margin-left: 100px;
+}
+
+.communty li {
+    margin: 100px;
+}
+
+.communty a {
+    display: block;
+}
+
+.communty>.facebook>a>img:hover {
+    background-image: url(../img/facebook.png);
+
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (min-width:768px) {
+    .About_us {
+        margin: 0 200px;
+    }
+
+    .About_us li {
+        width: calc(100% / 2 - 30px);
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .About_us li:hover p {
+        left: 0;
+        font-size: 30px;
+    }
+
+    .About_us li img {
+        width: 100%;
+    }
+
+    .About_us li p {
+        display: block;
+        position: absolute;
+        /* width: 520px; */
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        left: -100%;
+        transition: 0.8s;
+        background-color: darkred;
+        opacity: 0.3;
+        /* margin-left: 10px; */
+    }
+
+    .towelHover {
+        width: 75%;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .towel p {
+        display: block;
+        position: absolute;
+        /* width: 520px; */
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        left: -100%;
+        transition: 0.8s;
+        background-color: darkred;
+        opacity: 0.3;
+    }
+
+    .towel:hover p {
+        left: 0;
+    }
+
+}
+
+.rwd {
+    display: none;
+}
+
+/*/////////////////RWD/////////////////*/
+
+@media screen and (max-width:1024px) {
+    body {
+        background-color: black;
+    }
+
+    .home {
+        display: none;
+    }
+
+    .rwd {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        z-index: 999;
+        /* opacity: 0.6; */
+    }
+
+    .RWDoverlay {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        padding-bottom: 100%;
+        background-color: black;
+        left: 0;
+        top: 0;
+        display: none;
+        /* z-index: 99; */
+    }
+
+
+    .RWDlogo {
+        margin-top: 10%;
+        background-image: url(../img/logo.jpg);
+        width: 100%;
+        /* height: 100vh; */
+        padding-bottom: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    .RWDlist {
+        display: none;
+
+    }
+
+
+    /* .menuIcon {
+        background-image: url(../img/menu_icon-01.png);
+        background-position: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.842);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        width: 100%;
+        height: 50px;
+    } */
+
+    /* .cross {
+        background-image: url(../img/XX.png);
+        background-position: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.842);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        width: 100%;
+        height: 50px;
+    } */
+
+    .menuIcon img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .RWDlist a {
+
+        line-height: 100px;
+        /* margin: 50px; */
+        font-family: 'Poiret One', cursive;
+        color: rgb(207, 73, 73);
+        text-decoration: none;
+    }
+
+    .RWDlist li {
+        /* margin-top: 10px; */
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        /* width: 250%; */
+    }
+
+    .RWDlist li:first-child {
+        /* margin-top: 10px; */
+    }
+
+
+
+    h2 {
+        font-family: 'Poiret One', cursive;
+        color: blanchedalmond;
+        margin-top: 20%;
+    }
+
+    ul {
+        max-width: 100%;
+    }
+
+    .position {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    p {
+        color: blanchedalmond;
+        text-align: center;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .en {
+        font-family: 'Poiret One', cursive;
+    }
+
+    ul>.hsiao {
+        background-image: url(../img/蕭欸形象照FINAL.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    ul>.zhang {
+        background-image: url(../img/震申形象照-有LOGO.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    ul>.pool {
+        background-image: url(../img/大哥形象照-logo.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    ul>.eason {
+        background-image: url(../img/陰森形象照-LOGO.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    ul>.fatguy {
+        background-image: url(../img/邦傑形象照-LOGO.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    .towel {
+        background-image: url(../img/毛巾.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link img {
+        max-width: 100%;
+        width: 25%;
+        padding-bottom: 20%;
+    }
+
+    .link img:first-child {
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width:414px) {
+    body {
+        background-color: black;
+    }
+
+    .home {
+        display: none;
+    }
+
+    .rwd {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        z-index: 999;
+        /* opacity: 0.6; */
+    }
+
+    .RWDoverlay {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        padding-bottom: 100%;
+        background-color: black;
+        left: 0;
+        top: 0;
+        display: none;
+        /* z-index: 99; */
+    }
+
+
+    .RWDlogo {
+        margin-top: 10%;
+        background-image: url(../img/logo.jpg);
+        width: 100%;
+        /* height: 100vh; */
+        padding-bottom: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    .RWDlist {
+        display: none;
+    }
+    .icon{
+        background-color: rgba(0, 0, 0, 0.616);
+    }
+
+    .menuIcon {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        /* background-color: rgba(0, 0, 0, 0.616); */
+        position: relative;
+    }
+
+    span {
+        display: block;
+        border-bottom: 5px white solid;
+        width: 50px;
+        border-radius: 99em;
+    }
+
+
+    .cross {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    /* .menuIcon img {
+        width: 80%;
+        margin: auto;
+    } */
+
+    .switch.a {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        /* right: 40%; */
+        transform: translateY(0px);
+        transform: rotate(45deg);
+    }
+
+    .a {
+        position: absolute;
+        top: 25%;
+        transition: 0.8s;
+    }
+    .switch.b{
+        display: none;
+    }
+
+    .b {
+        position: absolute;
+        top: 50%;
+        transition: 0.8s;
+
+    }
+
+    .switch.c {
+        position: absolute;
+        /* bottom: 0; */
+        top: 25px;
+        left: 0;
+        /* right: 40%; */
+        transform: translateY(30px);
+        transform: rotate(-45deg);
+    }
+    .c{
+        position: absolute;
+        top: 75%;
+        transition: 0.8s;
+
+    }
+
+    .RWDlist a {
+
+        /* line-height: 100px; */
+        /* margin: 50px; */
+        font-family: 'Poiret One', cursive;
+        color: rgb(236, 86, 86);
+        text-decoration: none;
+    }
+
+    .RWDlist li {
+        /* margin-top: 10px; */
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        width: 100%;
+    }
+
+    .RWDlist li:first-child {
+        /* margin-top: 50px; */
+    }
+
+
+
+    h2 {
+        font-family: 'Poiret One', cursive;
+        color: blanchedalmond;
+        margin-top: 20%;
+    }
+
+    ul {
+        max-width: 100%;
+    }
+
+    .position {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    p {
+        color: blanchedalmond;
+        text-align: center;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .en {
+        font-family: 'Poiret One', cursive;
+    }
+
+    ul>.hsiao {
+        background-image: url(../img/蕭欸形象照FINAL.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    ul>.zhang {
+        background-image: url(../img/震申形象照-有LOGO.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    ul>.pool {
+        background-image: url(../img/大哥形象照-logo.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    ul>.eason {
+        background-image: url(../img/陰森形象照-LOGO.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    ul>.fatguy {
+        background-image: url(../img/邦傑形象照-LOGO.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    .towel {
+        background-image: url(../img/毛巾.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link img {
+        max-width: 100%;
+        width: 25%;
+        padding-bottom: 20%;
+    }
+
+    .link img:first-child {
+        margin-top: 15%;
+    }
+}
