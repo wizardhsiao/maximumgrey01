@@ -249,7 +249,7 @@ p {
 
 /*/////////////////RWD/////////////////*/
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1025px) {
     body {
         background-color: black;
     }
@@ -328,6 +328,69 @@ p {
         height: 50px;
     } */
 
+    .switch.a {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        /* right: 40%; */
+        transform: translateY(0px);
+        transform: rotate(45deg);
+    }
+
+    .a {
+        position: absolute;
+        top: 25%;
+        transition: 0.8s;
+    }
+    .switch.b{
+        display: none;
+    }
+
+    .b {
+        position: absolute;
+        top: 50%;
+        transition: 0.8s;
+
+    }
+
+    .switch.c {
+        position: absolute;
+        /* bottom: 0; */
+        top: 25px;
+        left: 0;
+        /* right: 40%; */
+        transform: translateY(30px);
+        transform: rotate(-45deg);
+    }
+    .c{
+        position: absolute;
+        top: 75%;
+        transition: 0.8s;
+
+    }
+    .menuIcon {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        /* background-color: rgba(0, 0, 0, 0.616);  */
+        position: relative;
+    }
+    span {
+        display: block;
+        border-bottom: 5px white solid;
+        width: 50px;
+        border-radius: 99em;
+    }
+
+
+    .cross {
+        position: relative;
+        margin: 0 auto;
+    }
+    .icon{
+        background-color: rgba(0, 0, 0, 0.75);
+    }
     .menuIcon img {
         width: 80%;
         margin: auto;
